@@ -1,15 +1,21 @@
-def get_employee_details(name: str, emp_id: str, department: str, salary: float) -> str:
-    """
-    Returns a formatted string containing employee details.
-    """
-    return (
+import pytest   # Added as you requested
+
+def employee_details(name, emp_id, department, salary):
+    result = (
         f"Employee Name: {name}\n"
         f"Employee ID: {emp_id}\n"
         f"Department: {department}\n"
         f"Salary: {salary}"
     )
+    return result
 
 
-# Example usage (optional):
+# ---- MAIN METHOD ----
 if __name__ == "__main__":
-    print(get_employee_details("John Doe", "E123", "HR", 50000))
+    # Sample input (you can change)
+    name = "Alice"
+    emp_id = "E1001"
+    department = "IT"
+    salary = 55000
+
+    print(employee_details(name, emp_id, department, salary))
